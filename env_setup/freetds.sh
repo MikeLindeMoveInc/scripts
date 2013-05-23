@@ -7,10 +7,10 @@ if [ "$UID" -ne "$ROOT_UID" ]; then
   exit
 fi
 
-cd /tmp/env_setup/
-wget http://nodejs.org/dist/node-latest.tar.gz
-tar xzf node-latest.tar.gz
-cd `ls -d */ | grep node-`
+cd /tmp/env_setup
+wget ftp://ftp.astron.com/pub/freetds/stable/freetds-stable.tgz
+tar xzf freetds-stable.tgz
+cd `ls -d */ | grep freetds-`
 
 ./configure
 make
