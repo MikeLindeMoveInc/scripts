@@ -16,5 +16,5 @@ yum install rabbitmq-server-3.1.1-1.noarch.rpm -y
 chkconfig rabbitmq-server on
 
 service rabbitmq-server start
-rabbitmq-plugins enable rabbitmq-management
+rabbitmq-plugins enable rabbitmq_management
 service rabbitmq-server restart
