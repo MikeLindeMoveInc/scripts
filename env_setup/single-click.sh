@@ -39,11 +39,20 @@ sh /tmp/env_setup/firewall.sh
 wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/devprereqs.sh -O /tmp/env_setup/devprereqs.sh
 sh /tmp/env_setup/devprereqs.sh
 
-wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/rvm.sh -O /tmp/env_setup/rvm.sh
-echo "$password" | sudo -S sh /tmp/env_setup/rvm.sh
-echo "$password" | sudo -S rvm install 1.9.3
-echo "$password" | sudo -S rvm use 1.9.3 --default
-echo "$password" | sudo -S gem install rails
+wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/mongodb.sh -O /tmp/env_setup/mongodb.sh
+sh /tmp/env_setup/mongodb.sh
+
+wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/samba.sh -O /tmp/env_setup/samba.sh
+sh /tmp/env_setup/samba.sh $password
+
+wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/freetds.sh -O /tmp/env_setup/freetds.sh
+sh /tmp/env_setup/freetds.sh
+
+wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/webmin.sh -O /tmp/env_setup/webmin.sh
+sh /tmp/env_setup/webmin.sh
+
+wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/rabbitmq.sh -O /tmp/env_setup/rabbitmq.sh
+sh /tmp/env_setup/rabbitmq.sh
 
 rm -rf /tmp/env_setup/
 
