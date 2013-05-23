@@ -15,3 +15,6 @@ rpm --import http://www.rabbitmq.com/rabbitmq-signing-key-public.asc
 yum install rabbitmq-server-3.1.1-1.noarch.rpm -y
 chkconfig rabbitmq-server on
 
+service rabbitmq-server start
+rabbitmq-plugins enable rabbitmq-management
+service rabbitmq-server restart
