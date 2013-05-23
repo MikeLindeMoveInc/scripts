@@ -28,6 +28,6 @@ content="[devroot]
 \nbrowseable=yes
 \nread only=no
 \ncomment=Development Root"
-echo -e $content >> smb.conf
+echo -e $content >> /etc/samba/smb.conf
 
 smbd reload
