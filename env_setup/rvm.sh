@@ -2,8 +2,8 @@
 
 # Run as root
 ROOT_UID=0
-if [ "$UID" -eq "$ROOT_UID" ]; then
-  echo "Do not run this script as root. sudo will be used when required."
+if [ "$UID" -ne "$ROOT_UID" ]; then
+  echo "This script must be run as root."
   exit
 fi
 

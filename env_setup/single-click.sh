@@ -40,6 +40,10 @@ echo "--------Install development prerequisites"
 wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/devprereqs.sh -O /tmp/env_setup/devprereqs.sh
 sh /tmp/env_setup/devprereqs.sh
 
+echo "--------Install Node.js"
+wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/node.sh -O /tmp/env_setup/node.sh
+sh /tmp/env_setup/node.sh
+
 echo "--------Install MongoDB"
 wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/mongodb.sh -O /tmp/env_setup/mongodb.sh
 sh /tmp/env_setup/mongodb.sh
@@ -61,10 +65,16 @@ echo "--------Install RabbitMQ"
 wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/rabbitmq.sh -O /tmp/env_setup/rabbitmq.sh
 sh /tmp/env_setup/rabbitmq.sh
 
+echo "--------Install RVM, Ruby, and Rails"
+wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/rvm.sh -O /tmp/env_setup/rvm.sh
+sh /tmp/env_setup/rvm.sh
+source usr/local/rvm/scripts/rvm
+rvm install 1.9.3
+
 echo "--------Remove the temporary folder"
 cd ~
 rm -rf /tmp/env_setup/
 
-echo "--------Setup complete"
-
 EOF
+
+echo "--------Setup complete"

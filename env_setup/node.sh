@@ -13,5 +13,4 @@ tar xzf node-latest.tar.gz
 cd `ls -d */ | grep node-`
 
 ./configure
-make
-make install
+make && make install

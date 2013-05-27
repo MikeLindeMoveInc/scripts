@@ -13,5 +13,4 @@ tar xzf freetds-stable.tgz
 cd `ls -d */ | grep freetds-`
 
 ./configure
-make
-make install
+make && make install
