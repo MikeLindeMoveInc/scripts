@@ -68,7 +68,7 @@ sh /tmp/env_setup/rabbitmq.sh
 echo "--------Install RVM, Ruby, and Rails"
 wget https://raw.github.com/MikeLindeMoveInc/scripts/master/env_setup/rvm.sh -O /tmp/env_setup/rvm.sh
 sh /tmp/env_setup/rvm.sh
-source usr/local/rvm/scripts/rvm
+source /usr/local/rvm/scripts/rvm
 rvm install 1.9.3
 
 echo "--------Remove the temporary folder"
